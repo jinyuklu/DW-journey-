@@ -1,0 +1,45 @@
+.content{
+	width: auto;
+	height: 780px;
+	background-color: whitesmoke;
+}
+#vote{
+    width:1099px;
+    margin:0 auto;
+    overflow: hidden;
+    /* padding:3px; */
+}
+#vote p{
+	font-size: 20px;
+	text-align: center;
+	margin:1em;
+}
+#vote li{
+	width: 260px;
+	list-style: none;
+	border:1px solid black;
+	float: left;
+	text-align: center;
+	/* padding:5px ; */
+	margin-left: 13px;
+	margin-top: 10px;
+}
+#vote img{
+	width: 230px;
+	margin: 10px ;
+}
+#vote input{
+	border:1px solid black;
+	background-color: black;
+	opacity: 0.5;
+	color: #fff;
+	font-size: 16px;
+	font-weight: bold;
+	border-radius: 6px;
+	padding:6px 24px;
+	margin-bottom: 20px;
+}
+audio{
+	width: 175px;
+	margin-left:-14px;
+}

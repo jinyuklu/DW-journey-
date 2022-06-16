@@ -1,0 +1,226 @@
+
+	/* 图片轮播样式 */
+	ul{
+		list-style: none;
+	}
+	a{
+	    text-decoration: none;
+	}
+	/* 轮播大小 */
+	#container{
+		position: relative;
+		width: 1250px;
+		height: 470px;
+		margin:auto;
+		background-color: aliceblue;
+		overflow: hidden; /*溢出隐藏：只显示一张图片*/
+	}
+	#container .parent{
+		position: absolute;
+		width: 6250px; /*整个图片层长度：1250*5=6250*/
+		height: 470px;
+	}
+	/* 轮播中的图片大小 */
+	#container .parent li{
+		float: left; 
+		width: 1250px;
+		height: 100%;
+	}
+	#container .parent li img{
+		width: 100%;
+		height: 100%;
+	}
+	#container .btnLeft,
+	#container .btnRight{
+		width: 50px;
+	    height: 50px;
+	    background-color: #9E9E9E;
+	    border-radius: 50%;
+	    opacity: 0.8;
+	    position: absolute; /*包含块为图片显示层container*/
+	    top: 0;
+	    bottom: 0;
+	    margin: auto;
+	    font-size: 30px;
+	 	color: white;
+	 	text-align: center;
+	 	line-height: 40px;
+	}
+	#container .btnLeft{
+	    left: 10px;
+	}
+	#container .btnRight{
+		right: 10px;
+	}
+	#container .btnLeft:hover,
+	#container .btnRight:hover{
+		opacity: 90%;
+		cursor: pointer;
+	}
+	/*蒙层*/
+	#container .modal{
+		width: 100%;
+		height: 40px;
+		background: rgba(0,0,0,.3);
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		line-height: 40px;
+		padding: 0 40px;
+		box-sizing: border-box;
+	}
+	#container .modal .title{
+		float: left;
+		color: #fff;
+		font-size: 12px;
+	}
+	/* 原点 */
+	#container .modal .dots{
+		float: right;
+		position: absolute;
+		bottom: 10px;
+		left: 600px;
+	}
+	/* 原点大小 */
+	#container .modal .dots li{
+		width: 8px;
+		height: 8px;
+		border-radius: 50%;
+		float: left;
+		/*可以使用行块盒*/
+		/*display: inline-block;*/
+		margin: 0 5px;
+		cursor: pointer;
+	}
+	.clearfix::after{
+		content: "";
+		display: block;
+		clear: both;
+	}
+	.on{
+		background-color: white;
+	}
+	.off{
+		background-color: gray;
+	} 
+	
+	/*  */
+	.text h1 {
+		text-align: center;
+		font-size: 25px;
+		margin-top: 10px;
+		color: rgb(#3E3E3E);
+		margin-bottom: 15px;
+	}
+	
+	.text .miaoshu {
+		width: 34%;
+		margin: 0 auto;
+		text-align: center;
+		font-size: 14px;
+		color: rgb(155, 155, 155);
+		margin-bottom: 20px;
+	}
+	
+ 	.div1{
+		    /*ridge定义 3D 垄状边框*/
+	 	    border:9px ridge white;
+			display: flex;
+			background-color: aliceblue;
+		} 
+	.div1 h3{
+		color: #000000;
+		margin-top: 30px;
+		margin-left: 200px;
+		margin-bottom: 20px;
+	}
+	.div1 p{
+		margin-bottom: 20px;
+		margin-left: 260px;
+		color: #000000;
+		
+	}
+
+	  /* 图片西藏1的设置 */
+	.div1 img{
+		/*设置图片的宽和长，即大小*/
+	    width:540px;
+	    height: 580px;
+		float: left;
+	    transition:all 0.6s;
+		margin-top: 15px;
+		margin-left: 15px;
+	}
+	.div2{
+		/*ridge定义 3D 垄状边框*/
+		border: 9px ridge white;
+		width: auto;
+		display: flex;
+		background-color: aliceblue;
+	}
+	.div2 h3{
+		color: #000000;
+		margin-top: 27px;
+		margin-left:135px;
+		margin-bottom: 20px;
+	}
+	.div2 p{
+		margin-bottom: 20px;
+		margin-left: 190px;
+		color: #000000;
+		
+	}
+	.div2 img{
+		/*设置图片的宽和长，即大小*/
+	    width:540px;
+	    height: 540px;
+	    transition:all 0.6s;
+		margin-top: 15px;
+		margin-bottom: 10px;
+		margin-left:270px;
+	}
+	
+	.div4 h1{	
+		color:black;
+		margin-top: 10px;
+		font-size: 24px;
+        text-align: center;
+    }
+	.div4{
+	    /*ridge定义 3D 垄状边框*/
+	    /* border:10px ridge white; */
+		background-color: aliceblue;
+		width: auto;
+	}
+    .div4 img{
+		/*设置图片的宽和长，即大小*/
+        width:340px;
+        height: 280px;
+        transition:all 0.6s;
+		/*设置左外边距、上边距、下边距，可以理解为图片间隔*/
+        margin-left:5%;
+        margin-bottom: 20px;
+		border: 1px ridge whitesmoke
+    }
+    /*:hover 选择器用于选择鼠标指针浮动在上面的元素。*/
+    .div4 img:hover{
+        /*transform 属性向元素应用 2D 或 3D 转换。该属性允许我们对元素进行旋转、缩放、移动或倾斜*/
+        /*scale(x,y)在X和Y上进行放缩，scaleX()仅在X轴即水平放缩，scaleY()同理*/
+        transform:scale(1.2);
+    }
+	.div4 p{
+		color: white;
+		font-size:25px;
+		margin-bottom: 10px;
+		margin-left:560px;
+	}
+	.div5{
+		background-color:black;
+		opacity: 0.6;
+	}
+	.div5 p{
+		padding: 10px;
+		padding-bottom: 10px;
+		color: white;
+		text-align: center;
+	}
